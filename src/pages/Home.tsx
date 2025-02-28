@@ -2,9 +2,9 @@ import NavigationMain from "@/components/nav-menu/NavigationMain";
 
 const Home = () => {
   return (
-    <div className="bg-background h-[500vh]">
+    <div className="bg-background">
       <NavigationMain />
-      <div className="h-[100vh] text-center flex flex-col gap-3 justify-center">
+      <div className="h-screen fade-in text-center flex flex-col gap-3 justify-center">
         <div className="text-3xl font-bold text-foreground">
           iGEM uOttawa Wiki
         </div>

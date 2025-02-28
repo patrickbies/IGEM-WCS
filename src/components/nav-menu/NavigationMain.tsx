@@ -9,18 +9,24 @@ import {
 } from "@/components/ui/navigation-menu";
 import ListItem from "./ListItem";
 import { Link } from "react-router-dom";
+import { AlignJustify } from "lucide-react";
 
 const NavigationMain = () => {
   return (
     <header
+      id="header"
       className="px-[3vw] border-b border-muted py-2 flex flex-row fixed top-0 w-full justify-between items-center
                     bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
-      iGEM Wiki
-      <NavigationMenu>
+      <Link to="/">iGEM Wiki</Link>
+      <NavigationMenu className="hidden md:block">
         <NavigationMenuList>
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Project</NavigationMenuTrigger>
+            <Link to="/project">
+              <NavigationMenuTrigger className="cursor-pointer">
+                Project
+              </NavigationMenuTrigger>
+            </Link>
             <NavigationMenuContent>
               <ul className="grid w-[300px] gap-3 p-1 md:w-[400px] md:grid-cols-2 lg:w-[450px]">
                 <ListItem
@@ -116,17 +122,23 @@ const NavigationMain = () => {
             </NavigationMenuContent>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <Link to="/">Team</Link>
-            </NavigationMenuLink>
+            <Link to="/">
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Team
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              <Link to="/">Community</Link>
-            </NavigationMenuLink>
+            <Link to="/">
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                Community
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
+      <AlignJustify className="md:hidden hover:scale-105 transition-transform"/>
+      <div className="text-background hidden md:block">iGEM Wiki</div>
     </header>
   );
 };
