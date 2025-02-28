@@ -2,7 +2,7 @@ import NavigationMain from "@/components/nav-menu/NavigationMain";
 
 const Home = () => {
   return (
-    <div className="bg-background h-[500vh] justify-center">
+    <div className="bg-background h-[500vh]">
       <NavigationMain />
       <div className="h-[100vh] text-center flex flex-col gap-3 justify-center">
         <div className="text-3xl font-bold text-foreground">
