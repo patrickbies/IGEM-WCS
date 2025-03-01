@@ -14,9 +14,7 @@ import { AlignJustify } from "lucide-react";
 const NavigationMain = () => {
   return (
     <header
-      id="header"
-      className="px-[3vw] border-b border-muted py-2 flex flex-row fixed top-0 w-full justify-between items-center
-                    bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
+      className="px-[3vw] border-b z-50 border-muted py-2 flex flex-row sticky top-0 w-full justify-between items-center bg-background"
     >
       <Link to="/">iGEM Wiki</Link>
       <NavigationMenu className="hidden md:block">
@@ -138,7 +136,7 @@ const NavigationMain = () => {
         </NavigationMenuList>
       </NavigationMenu>
       <AlignJustify className="md:hidden hover:scale-105 transition-transform"/>
-      <div className="text-background hidden md:block">iGEM Wiki</div>
+      <div className="text-transparent hidden md:block">iGEM Wiki</div>
     </header>
   );
 };
